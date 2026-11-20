@@ -1,0 +1,9 @@
+accion,tipo,cajero_con_menos
+Retiro,Rápido,3
+Retiro,Normal,1
+Retiro,Lento,3
+Retiro,Muy lento,1
+Pago,Rápido,3
+Pago,Normal,2
+Pago,Lento,3
+Pago,Muy lento,1

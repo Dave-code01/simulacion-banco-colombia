@@ -1,0 +1,126 @@
+Piloto: 10 réplicas -> réplicas finales: 193  |  semilla base: 2025
+
+RÉPLICAS NECESARIAS (espera promedio, 95 % de confianza)
+             escenario  media_piloto  desv_piloto  n_para_10pct  n_para_5pct  n_final_usado
+         E0 - 3 mixtas         3.298        1.120            60          237            193
+E1 - 1 retiro + 2 pago         5.954        2.583            97          386            193
+E2 - 2 retiro + 1 pago         3.871        2.376           193          772            193
+         E3 - 4 mixtas         2.287        0.981            95          377            193
+E4 - 2 retiro + 2 pago         1.940        0.751            77          308            193 
+
+PUNTO 1 - Tiempo promedio de atención por cajero (min)
+             escenario  cajero     atiende  servicio_prom  servicio_desv  servicio_ic95  espera_prom  espera_ic95  usuarios_prom  utilizacion_prom
+         E0 - 3 mixtas       1 Retiro/Pago          3.192          0.496          0.070        3.346        0.308         66.295             0.433
+         E0 - 3 mixtas       2 Retiro/Pago          3.225          0.499          0.071        3.356        0.316         67.622             0.446
+         E0 - 3 mixtas       3 Retiro/Pago          3.230          0.527          0.075        3.283        0.326         66.233             0.437
+E1 - 1 retiro + 2 pago       1      Retiro          2.357          0.237          0.034        6.177        0.522        139.819             0.672
+E1 - 1 retiro + 2 pago       2        Pago          5.136          1.038          0.147        2.467        0.261         30.430             0.320
+E1 - 1 retiro + 2 pago       3        Pago          5.259          1.093          0.155        2.344        0.225         29.902             0.321
+E2 - 2 retiro + 1 pago       1      Retiro          2.359          0.337          0.048        1.575        0.129         69.570             0.333
+E2 - 2 retiro + 1 pago       2      Retiro          2.355          0.322          0.046        1.677        0.164         70.249             0.336
+E2 - 2 retiro + 1 pago       3        Pago          5.197          0.722          0.102        8.530        0.913         60.332             0.636
+         E3 - 4 mixtas       1 Retiro/Pago          3.173          0.599          0.085        2.154        0.226         49.601             0.324
+         E3 - 4 mixtas       2 Retiro/Pago          3.242          0.594          0.084        2.054        0.209         50.399             0.334
+         E3 - 4 mixtas       3 Retiro/Pago          3.258          0.624          0.089        2.193        0.211         50.176             0.337
+         E3 - 4 mixtas       4 Retiro/Pago          3.198          0.618          0.088        1.903        0.192         49.974             0.327
+E4 - 2 retiro + 2 pago       1      Retiro          2.359          0.337          0.048        1.575        0.129         69.570             0.336
+E4 - 2 retiro + 2 pago       2      Retiro          2.355          0.322          0.046        1.677        0.164         70.249             0.340
+E4 - 2 retiro + 2 pago       3        Pago          5.136          1.038          0.147        2.467        0.261         30.430             0.321
+E4 - 2 retiro + 2 pago       4        Pago          5.259          1.093          0.155        2.344        0.225         29.902             0.323 
+
+PUNTO 2 - Promedio de usuarios por tipo y cajero (E0)
+cajero                1      2      3  Total 3 cajeros
+accion tipo                                           
+Retiro Rápido     10.64  10.78  10.45            31.87
+       Normal     18.39  19.06  18.60            56.05
+       Lento       8.10   8.17   8.01            24.27
+       Muy lento   8.93   9.43   9.27            27.63
+Pago   Rápido      1.95   1.91   1.90             5.76
+       Normal      4.22   3.91   4.07            12.21
+       Lento       5.98   6.21   5.83            18.02
+       Muy lento   8.09   8.16   8.10            24.35 
+
+PUNTO 3 - Total de usuarios por tipo en cada réplica (E0)
+accion  Retiro                          Pago                        Total
+tipo    Rápido Normal Lento Muy lento Rápido Normal Lento Muy lento      
+replica                                                                  
+1           29     46    23        20      7     14    17        31   187
+2           28     53    25        32      8      8    16        23   193
+3           32     59    22        23      4      6    21        27   194
+4           27     59    32        33      4      5    19        19   198
+5           26     51    24        34      7     10    17        20   189
+6           48     62    22        34     10     14    21        21   232
+7           37     49    25        26      4      8    16        25   190
+8           25     46    18        26      2     15    16        19   167
+9           37     58    26        28      8     14    21        19   211
+10          31     47    19        27      4     13    17        29   187 
+(ver CSV para todas las réplicas)
+
+                  minimo  replica_minimo  promedio   desv  maximo  replica_maximo
+accion tipo                                                                      
+Retiro Rápido         19              53     31.87   5.72      48               6
+       Normal         37              43     56.05   7.86      77             118
+       Lento          13              15     24.27   4.80      39              30
+       Muy lento      16             172     27.63   4.98      39             153
+Pago   Rápido          1              40      5.76   2.66      14              11
+       Normal          4              50     12.21   3.86      21             120
+       Lento           7             152     18.02   4.09      29              22
+       Muy lento      12             161     24.35   4.97      39              14
+Total                154             152    200.15  15.13     238             113 
+
+accion  tipo     
+Retiro  Rápido       3
+        Normal       1
+        Lento        3
+        Muy lento    1
+Pago    Rápido       3
+        Normal       2
+        Lento        3
+        Muy lento    1 
+
+PUNTOS 4-5 - Espera por escenario (min)
+             escenario  espera_prom  espera_prom_ic95  espera_retiro  espera_retiro_ic95  espera_pago  espera_pago_ic95  pct_espera_mas_10  pct_espera_mas_10_ic95  espera_max  espera_max_ic95  cierre_real  cierre_real_ic95
+         E0 - 3 mixtas         3.38              0.20           3.47                0.21         3.19              0.22              11.82                    0.86       30.60             1.49       488.53              1.49
+E1 - 1 retiro + 2 pago         5.10              0.38           6.18                0.52         2.45              0.18              19.00                    1.49       30.85             1.47       489.82              1.49
+E2 - 2 retiro + 1 pago         3.82              0.31           1.65                0.10         8.53              0.91              12.33                    0.87       35.93             2.23       492.62              2.15
+         E3 - 4 mixtas         2.11              0.11           2.20                0.12         1.92              0.12               6.91                    0.48       26.59             1.16       486.58              1.24
+E4 - 2 retiro + 2 pago         1.91              0.09           1.65                0.10         2.45              0.18               5.72                    0.44       25.10             1.23       486.75              1.25 
+
+escenario         E0 - 3 mixtas  E1 - 1 retiro + 2 pago  E2 - 2 retiro + 1 pago  E3 - 4 mixtas  E4 - 2 retiro + 2 pago
+accion tipo                                                                                                           
+Pago   Lento               3.06                    2.32                    8.26           1.79                    2.32
+       Muy lento           2.93                    2.23                    7.98           1.72                    2.23
+       Normal              3.27                    2.76                    9.35           2.08                    2.76
+       Rápido              4.44                    3.35                   10.56           2.92                    3.35
+Retiro Lento               3.17                    5.64                    1.38           1.96                    1.38
+       Muy lento           3.19                    5.65                    1.45           2.00                    1.45
+       Normal              3.49                    6.20                    1.65           2.23                    1.65
+       Rápido              3.88                    7.01                    2.01           2.51                    2.01 
+
+                     A                      B  dif_media_A_menos_B  ic95_inf  ic95_sup  p_valor
+E1 - 1 retiro + 2 pago E2 - 2 retiro + 1 pago                1.280     0.854     1.706      0.0
+         E0 - 3 mixtas E2 - 2 retiro + 1 pago               -0.439    -0.650    -0.228      0.0
+         E0 - 3 mixtas          E3 - 4 mixtas                1.267     1.139     1.396      0.0
+E2 - 2 retiro + 1 pago E4 - 2 retiro + 2 pago                1.911     1.646     2.175      0.0 
+
+MÉTRICAS DE COLAS POR CAJA (teórico M/M/1 vs simulado)
+             escenario  cajero     atiende  lambda_teo  mu_teo  rho_teo  estable  L_teo  Lq_teo  W_teo  Wq_teo  lambda_sim  rho_sim  L_sim  Lq_sim  W_sim  Wq_sim
+         E0 - 3 mixtas       1 Retiro/Pago       0.139   0.313    0.445     True  0.800   0.356  5.757   2.559       0.138    0.433  0.903   0.462  6.538   3.346
+         E0 - 3 mixtas       2 Retiro/Pago       0.139   0.313    0.445     True  0.800   0.356  5.757   2.559       0.141    0.446  0.927   0.473  6.581   3.356
+         E0 - 3 mixtas       3 Retiro/Pago       0.139   0.313    0.445     True  0.800   0.356  5.757   2.559       0.138    0.437  0.899   0.453  6.513   3.283
+E1 - 1 retiro + 2 pago       1      Retiro       0.292   0.427    0.683     True  2.155   1.472  7.383   5.043       0.291    0.672  2.486   1.799  8.534   6.177
+E1 - 1 retiro + 2 pago       2        Pago       0.063   0.192    0.325     True  0.482   0.157  7.707   2.507       0.063    0.320  0.482   0.156  7.603   2.467
+E1 - 1 retiro + 2 pago       3        Pago       0.063   0.192    0.325     True  0.482   0.157  7.707   2.507       0.062    0.321  0.474   0.146  7.603   2.344
+E2 - 2 retiro + 1 pago       1      Retiro       0.146   0.427    0.342     True  0.519   0.177  3.554   1.214       0.145    0.333  0.570   0.228  3.934   1.575
+E2 - 2 retiro + 1 pago       2      Retiro       0.146   0.427    0.342     True  0.519   0.177  3.554   1.214       0.146    0.336  0.590   0.245  4.032   1.677
+E2 - 2 retiro + 1 pago       3        Pago       0.125   0.192    0.651     True  1.862   1.211 14.880   9.680       0.126    0.636  1.725   1.072 13.727   8.530
+         E3 - 4 mixtas       1 Retiro/Pago       0.104   0.313    0.333     True  0.500   0.167  4.798   1.600       0.103    0.324  0.550   0.223  5.326   2.154
+         E3 - 4 mixtas       2 Retiro/Pago       0.104   0.313    0.333     True  0.500   0.167  4.798   1.600       0.105    0.334  0.556   0.216  5.296   2.054
+         E3 - 4 mixtas       3 Retiro/Pago       0.104   0.313    0.333     True  0.500   0.167  4.798   1.600       0.105    0.337  0.570   0.229  5.451   2.193
+         E3 - 4 mixtas       4 Retiro/Pago       0.104   0.313    0.333     True  0.500   0.167  4.798   1.600       0.104    0.327  0.531   0.198  5.101   1.903
+E4 - 2 retiro + 2 pago       1      Retiro       0.146   0.427    0.342     True  0.519   0.177  3.554   1.214       0.145    0.336  0.570   0.228  3.934   1.575
+E4 - 2 retiro + 2 pago       2      Retiro       0.146   0.427    0.342     True  0.519   0.177  3.554   1.214       0.146    0.340  0.590   0.245  4.032   1.677
+E4 - 2 retiro + 2 pago       3        Pago       0.063   0.192    0.325     True  0.482   0.157  7.707   2.507       0.063    0.321  0.482   0.156  7.603   2.467
+E4 - 2 retiro + 2 pago       4        Pago       0.063   0.192    0.325     True  0.482   0.157  7.707   2.507       0.062    0.323  0.474   0.146  7.603   2.344
+
+Excel: resultados_simulacion_banco.xlsx  |  Gráficas: carpeta figuras/
